@@ -1,13 +1,13 @@
 package com.eni_ecole.lokacarapp.bo;
 
-public class agence {
+public class Agence {
 
     private int IdAgence;
     private String NomAgence;
-    private gerant Responsable;
+    private Gerant Responsable;
     private int NbreVehicules;
 
-    public agence(int idAgence, String nomAgence, gerant responsable, int nbreVehicules) {
+    public Agence(int idAgence, String nomAgence, Gerant responsable, int nbreVehicules) {
         IdAgence = idAgence;
         NomAgence = nomAgence;
         Responsable = responsable;
@@ -30,11 +30,11 @@ public class agence {
         NomAgence = nomAgence;
     }
 
-    public gerant getResponsable() {
+    public Gerant getResponsable() {
         return Responsable;
     }
 
-    public void setResponsable(gerant responsable) {
+    public void setResponsable(Gerant responsable) {
         Responsable = responsable;
     }
 

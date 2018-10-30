@@ -4,7 +4,7 @@ import android.widget.ImageView;
 
 import java.util.Date;
 
-public class louerTache {
+public class LouerTache {
 
    private int IdTache;
    private int IdVehicule;
@@ -17,7 +17,7 @@ public class louerTache {
    private Float PrixTotal;
    private Float Dure;
 
-    public louerTache( int idVehicule, int idClient, Date dateLoue, Date dateRendu, String smsRecapitulatif, ImageView imgAvantLouer, ImageView imgApresRendu, Float prixTotal, Float dure) {
+    public LouerTache(int idVehicule, int idClient, Date dateLoue, Date dateRendu, String smsRecapitulatif, ImageView imgAvantLouer, ImageView imgApresRendu, Float prixTotal, Float dure) {
         IdVehicule = idVehicule;
         IdClient = idClient;
         DateLoue = dateLoue;

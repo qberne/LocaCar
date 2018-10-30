@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.eni_ecole.lokacarapp.dao.LouerTacheContract;
 import com.eni_ecole.lokacarapp.dao.AgenceContract;
 import com.eni_ecole.lokacarapp.dao.ClientContract;
 import com.eni_ecole.lokacarapp.dao.GerantContract;
@@ -24,6 +25,7 @@ public class GestionBddHelper extends SQLiteOpenHelper {
         db.execSQL(ClientContract.SQL_CREATE_TABLE);
         db.execSQL(GerantContract.SQL_CREATE_TABLE);
         db.execSQL(VehiculeContract.SQL_CREATE_TABLE);
+        db.execSQL(LouerTacheContract.SQL_CREATE_TABLE);
     }
 
     @Override
@@ -32,6 +34,7 @@ public class GestionBddHelper extends SQLiteOpenHelper {
         db.execSQL(ClientContract.SQL_DROP_TABLE);
         db.execSQL(GerantContract.SQL_DROP_TABLE);
         db.execSQL(VehiculeContract.SQL_DROP_TABLE);
+        db.execSQL(LouerTacheContract.SQL_DROP_TABLE);
         onCreate(db);
     }
 

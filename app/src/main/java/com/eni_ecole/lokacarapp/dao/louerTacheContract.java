@@ -1,6 +1,6 @@
 package com.eni_ecole.lokacarapp.dao;
 
-public class louerTacheContract {
+public class LouerTacheContract {
 
     public static final String TABLE_NAME = " LOUER_TACHE ";
     public static final String COL_IDTACHE = " IDTACHE ";

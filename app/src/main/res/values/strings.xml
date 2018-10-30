@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">LokaCarApp</string>
+    <string name="textViewNom">Nom</string>
+
+    <string-array name="spinner_menu">
+            <item>Comptes</item>
+            <item>Tâches</item>
+            <item>Clients</item>
+            <item>Véhicules</item>
+    </string-array>
+
 </resources>

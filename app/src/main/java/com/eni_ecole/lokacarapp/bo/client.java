@@ -1,6 +1,6 @@
 package com.eni_ecole.lokacarapp.bo;
 
-public class client {
+public class Client {
 
     private int IdClient;
     private String Nom;
@@ -9,7 +9,7 @@ public class client {
     private String Email;
     private String ScanPermis;              // url du stockage
 
-    public client(int idClient, String nom, String prenom, String noDeTelephone, String email, String scanPermis) {
+    public Client(int idClient, String nom, String prenom, String noDeTelephone, String email, String scanPermis) {
         IdClient = idClient;
         Nom = nom;
         Prenom = prenom;

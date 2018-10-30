@@ -1,6 +1,6 @@
 package com.eni_ecole.lokacarapp.bo;
 
-public class gerant {
+public class Gerant {
 
     private int IdGerant;
     private String Nom;
@@ -8,7 +8,7 @@ public class gerant {
     private String Login;
     private String Password;
 
-    public gerant(int idGerant, String nom, String prenom, String login, String password) {
+    public Gerant(int idGerant, String nom, String prenom, String login, String password) {
         IdGerant = idGerant;
         Nom = nom;
         Prenom = prenom;

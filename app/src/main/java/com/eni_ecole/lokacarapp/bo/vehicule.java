@@ -1,6 +1,6 @@
 package com.eni_ecole.lokacarapp.bo;
 
-public class vehicule {
+public class Vehicule {
 
     private int IdVehicule;
     private String Marque;
@@ -12,10 +12,10 @@ public class vehicule {
     private String LienPhoto;
     private int PrixParJour;
     private boolean Disponible;
-    private agence AgenceDeRattachement;
+    private Agence AgenceDeRattachement;
 
-    public vehicule(int idVehicule, String marque, String modele, int places, String immatriculation,
-                    int chevaux, int kilometrage, String lienPhoto, int prixParJour, boolean disponible, agence agenceDeRattachement) {
+    public Vehicule(int idVehicule, String marque, String modele, int places, String immatriculation,
+                    int chevaux, int kilometrage, String lienPhoto, int prixParJour, boolean disponible, Agence agenceDeRattachement) {
         IdVehicule = idVehicule;
         Marque = marque;
         Modele = modele;
@@ -109,11 +109,11 @@ public class vehicule {
         Disponible = disponible;
     }
 
-    public agence getAgenceDeRattachement() {
+    public Agence getAgenceDeRattachement() {
         return AgenceDeRattachement;
     }
 
-    public void setAgenceDeRattachement(agence agenceDeRattachement) {
+    public void setAgenceDeRattachement(Agence agenceDeRattachement) {
         AgenceDeRattachement = agenceDeRattachement;
     }
 }
