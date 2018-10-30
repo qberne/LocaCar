@@ -7,7 +7,7 @@ public class client {
     private String Prenom;
     private String NoDeTelephone;
     private String Email;
-    private String ScanPermis;
+    private String ScanPermis;              // url du stockage
 
     public client(int idClient, String nom, String prenom, String noDeTelephone, String email, String scanPermis) {
         IdClient = idClient;
