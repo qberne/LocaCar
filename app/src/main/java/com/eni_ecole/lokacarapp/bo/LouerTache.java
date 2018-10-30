@@ -29,6 +29,9 @@ public class LouerTache {
         Dure = dure;
     }
 
+    public LouerTache() {
+    }
+
     public int getIdTache() {
         return IdTache;
     }

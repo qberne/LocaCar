@@ -2,10 +2,10 @@ package com.eni_ecole.lokacarapp.dao;
 
 public class AgenceContract {
 
-    public static final String TABLE_NAME = " AGENCE ";
-    public static final String COL_ID = " IDAGENCE ";
-    public static final String COL_GERANT = " GERANT ";
-    public static final String COL_NBRE_VEHICULE= " NBRE VEHICULE";
+    public static final String TABLE_NAME = "AGENCE";
+    public static final String COL_ID = "IDAGENCE";
+    public static final String COL_GERANT = "GERANT";
+    public static final String COL_NBRE_VEHICULE= "NBRE_VEHICULE";
 
     public static final int NUM_COL_ID = 0;
     public static final int NUM_COL_GERANT = 1 ;

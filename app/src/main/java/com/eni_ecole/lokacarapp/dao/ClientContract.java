@@ -2,13 +2,13 @@ package com.eni_ecole.lokacarapp.dao;
 
 public class ClientContract {
 
-    public static final String TABLE_NAME = " CLIENT ";
-    public static final String COL_ID = " IDCLIENT ";
-    public static final String COL_NOM = " NOM CLIENT ";
-    public static final String COL_PRENOM = " PRENOM CLIENT ";
-    public static final String COL_NO_DE_TELEPHONE = " NO DE TELEPHONE ";
-    public static final String COL_EMAIL = " EMAIL ";
-    public static final String COL_SCAN_DE_PERMIS = " PERMIS";  // url du stockage
+    public static final String TABLE_NAME = "CLIENT";
+    public static final String COL_ID = "IDCLIENT";
+    public static final String COL_NOM = "NOM_CLIENT";
+    public static final String COL_PRENOM = "PRENOM_CLIENT";
+    public static final String COL_NO_DE_TELEPHONE = "NO_DE_TELEPHONE";
+    public static final String COL_EMAIL = "EMAIL";
+    public static final String COL_SCAN_DE_PERMIS = "PERMIS";  // url du stockage
 
     public static final int NUM_COL_ID = 0;
     public static final int NUM_COL_NOM = 1 ;

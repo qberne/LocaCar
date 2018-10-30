@@ -7,8 +7,10 @@ public class Agence {
     private Gerant Responsable;
     private int NbreVehicules;
 
-    public Agence(int idAgence, String nomAgence, Gerant responsable, int nbreVehicules) {
-        IdAgence = idAgence;
+    public Agence() {
+    }
+
+    public Agence( String nomAgence, Gerant responsable, int nbreVehicules) {
         NomAgence = nomAgence;
         Responsable = responsable;
         NbreVehicules = nbreVehicules;
@@ -16,10 +18,6 @@ public class Agence {
 
     public int getIdAgence() {
         return IdAgence;
-    }
-
-    public void setIdAgence(int idAgence) {
-        IdAgence = idAgence;
     }
 
     public String getNomAgence() {

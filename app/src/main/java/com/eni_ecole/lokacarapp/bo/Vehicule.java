@@ -14,9 +14,11 @@ public class Vehicule {
     private boolean Disponible;
     private Agence AgenceDeRattachement;
 
-    public Vehicule(int idVehicule, String marque, String modele, int places, String immatriculation,
+    public Vehicule() {
+    }
+
+    public Vehicule( String marque, String modele, int places, String immatriculation,
                     int chevaux, int kilometrage, String lienPhoto, int prixParJour, boolean disponible, Agence agenceDeRattachement) {
-        IdVehicule = idVehicule;
         Marque = marque;
         Modele = modele;
         Places = places;
@@ -31,10 +33,6 @@ public class Vehicule {
 
     public int getIdVehicule() {
         return IdVehicule;
-    }
-
-    public void setIdVehicule(int idVehicule) {
-        IdVehicule = idVehicule;
     }
 
     public String getMarque() {

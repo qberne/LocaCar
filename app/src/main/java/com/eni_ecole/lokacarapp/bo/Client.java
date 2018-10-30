@@ -9,8 +9,10 @@ public class Client {
     private String Email;
     private String ScanPermis;              // url du stockage
 
-    public Client(int idClient, String nom, String prenom, String noDeTelephone, String email, String scanPermis) {
-        IdClient = idClient;
+    public Client() {
+    }
+
+    public Client( String nom, String prenom, String noDeTelephone, String email, String scanPermis) {
         Nom = nom;
         Prenom = prenom;
         NoDeTelephone = noDeTelephone;
@@ -20,10 +22,6 @@ public class Client {
 
     public int getIdClient() {
         return IdClient;
-    }
-
-    public void setIdClient(int idClient) {
-        IdClient = idClient;
     }
 
     public String getNom() {

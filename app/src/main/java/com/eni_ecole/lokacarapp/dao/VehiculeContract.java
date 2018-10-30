@@ -2,18 +2,18 @@ package com.eni_ecole.lokacarapp.dao;
 
 public class VehiculeContract {
 
-    public static final String TABLE_NAME = " VEHICULE ";
-    public static final String COL_ID = " IDVEHICULE";
-    public static final String COL_MARQUE = " MARQUE ";
-    public static final String COL_MODELE = " MODELE ";
-    public static final String COL_PLACES = " PLACES ";
-    public static final String COL_IMMAT = " IMMATRICULATION ";
-    public static final String COL_CHEVAUX = " CHEVAUX ";
-    public static final String COL_KILOMETRAGE = " KILOMETRAGE ";
-    public static final String COL_LIEN_PHOTO = " LIEN_PHOTO ";
-    public static final String COL_PRIX_PAR_JOUR = " PRIX PAR JOUR ";
-    public static final String COL_DISPONIBLE = " DISPONIBLE";
-    public static final String COL_AGENCE_DE_RATTACHEMENT = " AGENCE_DE_RATTACHEMENT ";
+    public static final String TABLE_NAME = "VEHICULE";
+    public static final String COL_ID = "IDVEHICULE";
+    public static final String COL_MARQUE = "MARQUE";
+    public static final String COL_MODELE = "MODELE";
+    public static final String COL_PLACES = "PLACES";
+    public static final String COL_IMMAT = "IMMATRICULATION";
+    public static final String COL_CHEVAUX = "CHEVAUX";
+    public static final String COL_KILOMETRAGE = "KILOMETRAGE";
+    public static final String COL_LIEN_PHOTO = "LIEN_PHOTO";
+    public static final String COL_PRIX_PAR_JOUR = "PRIX_PAR_JOUR";
+    public static final String COL_DISPONIBLE = "DISPONIBLE";
+    public static final String COL_AGENCE_DE_RATTACHEMENT = "AGENCE_DE_RATTACHEMENT";
 
     public static final int NUM_COL_ID = 0 ;
     public static final int NUM_COL_MARQUE = 1 ;

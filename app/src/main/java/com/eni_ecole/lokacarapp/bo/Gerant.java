@@ -8,8 +8,10 @@ public class Gerant {
     private String Login;
     private String Password;
 
-    public Gerant(int idGerant, String nom, String prenom, String login, String password) {
-        IdGerant = idGerant;
+    public Gerant() {
+    }
+
+    public Gerant( String nom, String prenom, String login, String password) {
         Nom = nom;
         Prenom = prenom;
         Login = login;
@@ -18,10 +20,6 @@ public class Gerant {
 
     public int getIdGerant() {
         return IdGerant;
-    }
-
-    public void setIdGerant(int idGerant) {
-        IdGerant = idGerant;
     }
 
     public String getNom() {
