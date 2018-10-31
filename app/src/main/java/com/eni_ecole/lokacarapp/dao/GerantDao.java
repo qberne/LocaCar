@@ -42,13 +42,13 @@ public class GerantDao {
             gerantEnCours.setPrenom(cursor.getString(cursor.getColumnIndex(GerantContract.COL_PRENOM)));
             gerantEnCours.setLogin(cursor.getString(cursor.getColumnIndex(GerantContract.COL_LOGIN)));
             gerantEnCours.setPassword(cursor.getString(cursor.getColumnIndex(GerantContract.COL_PASSWORD)));
-
             list_gerant.add(gerantEnCours);
         }
         cursor.close();
         db.close();
 
         return list_gerant;
+
     }
 
     public int update(Gerant item) {
@@ -61,7 +61,7 @@ public class GerantDao {
         return db.update("GERANT", values, null ,null );
     }
 
-    public int removeGerant(Gerant ancienGerant) {
+    public int deleteGerant(String ancienGerant) {
         return db.delete("GERANT", GerantContract.COL_NOM + " = " + ancienGerant, null);
 
     }

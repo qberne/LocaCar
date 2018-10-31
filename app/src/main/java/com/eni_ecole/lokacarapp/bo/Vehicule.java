@@ -12,13 +12,13 @@ public class Vehicule {
     private String LienPhoto;
     private int PrixParJour;
     private boolean Disponible;
-    private Agence AgenceDeRattachement;
+    private int AgenceDeRattachement;
 
     public Vehicule() {
     }
 
     public Vehicule( String marque, String modele, int places, String immatriculation,
-                    int chevaux, int kilometrage, String lienPhoto, int prixParJour, boolean disponible, Agence agenceDeRattachement) {
+                    int chevaux, int kilometrage, String lienPhoto, int prixParJour, boolean disponible, int agenceDeRattachement) {
         Marque = marque;
         Modele = modele;
         Places = places;
@@ -107,11 +107,11 @@ public class Vehicule {
         Disponible = disponible;
     }
 
-    public Agence getAgenceDeRattachement() {
+    public int getAgenceDeRattachement() {
         return AgenceDeRattachement;
     }
 
-    public void setAgenceDeRattachement(Agence agenceDeRattachement) {
+    public void setAgenceDeRattachement(int agenceDeRattachement) {
         AgenceDeRattachement = agenceDeRattachement;
     }
 }

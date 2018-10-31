@@ -29,7 +29,8 @@ public class VehiculeContract {
 
     public static final String SQL_CREATE_TABLE =
             " CREATE TABLE IF NOT EXISTS "
-                    + TABLE_NAME + " ("
+                    + TABLE_NAME
+                    + " ("
                     + COL_ID
                     + " INTEGER PRIMARY KEY AUTOINCREMENT , "
                     + COL_MARQUE
@@ -52,6 +53,9 @@ public class VehiculeContract {
                     + " BOOLEAN , "
                     + COL_AGENCE_DE_RATTACHEMENT
                     + " INTEGER )";
+
+//    public static final String SQL_ALTER_TABLE =
+//            "FOREIGN KEY (" + COL_AGENCE_DE_RATTACHEMENT  + ") REFERENCES " + AgenceContract.TABLE_NAME+"("+ AgenceContract.COL_ID+ "))";
 
     public static final String SQL_DROP_TABLE =
             " DROP TABLE IF EXISTS "
