@@ -9,15 +9,16 @@ public class LouerTache {
    private int IdTache;
    private int IdVehicule;
    private int IdClient;
-   private Date DateLoue;
-   private Date DateRendu;
+   private String DateLoue;
+   private String DateRendu;
    private String SmsRecapitulatif;
-   private ImageView ImgAvantLouer;
-   private ImageView ImgApresRendu;
+   private String ImgAvantLouer;
+   private String ImgApresRendu;
    private Float PrixTotal;
-   private Float Dure;
+   private Float Duree;
+   private Float PrixParJour;
 
-    public LouerTache(int idVehicule, int idClient, Date dateLoue, Date dateRendu, String smsRecapitulatif, ImageView imgAvantLouer, ImageView imgApresRendu, Float prixTotal, Float dure) {
+    public LouerTache(int idVehicule, int idClient, String dateLoue, String dateRendu, String smsRecapitulatif, String imgAvantLouer, String imgApresRendu, Float prixTotal, Float duree, Float prixParJour) {
         IdVehicule = idVehicule;
         IdClient = idClient;
         DateLoue = dateLoue;
@@ -26,7 +27,8 @@ public class LouerTache {
         ImgAvantLouer = imgAvantLouer;
         ImgApresRendu = imgApresRendu;
         PrixTotal = prixTotal;
-        Dure = dure;
+        Duree = duree;
+        PrixParJour = prixParJour;
     }
 
     public LouerTache() {
@@ -56,19 +58,19 @@ public class LouerTache {
         IdClient = idClient;
     }
 
-    public Date getDateLoue() {
+    public String getDateLoue() {
         return DateLoue;
     }
 
-    public void setDateLoue(Date dateLoue) {
+    public void setDateLoue(String dateLoue) {
         DateLoue = dateLoue;
     }
 
-    public Date getDateRendu() {
+    public String getDateRendu() {
         return DateRendu;
     }
 
-    public void setDateRendu(Date dateRendu) {
+    public void setDateRendu(String dateRendu) {
         DateRendu = dateRendu;
     }
 
@@ -80,19 +82,19 @@ public class LouerTache {
         SmsRecapitulatif = smsRecapitulatif;
     }
 
-    public ImageView getImgAvantLouer() {
+    public String getImgAvantLouer() {
         return ImgAvantLouer;
     }
 
-    public void setImgAvantLouer(ImageView imgAvantLouer) {
+    public void setImgAvantLouer(String imgAvantLouer) {
         ImgAvantLouer = imgAvantLouer;
     }
 
-    public ImageView getImgApresRendu() {
+    public String getImgApresRendu() {
         return ImgApresRendu;
     }
 
-    public void setImgApresRendu(ImageView imgApresRendu) {
+    public void setImgApresRendu(String imgApresRendu) {
         ImgApresRendu = imgApresRendu;
     }
 
@@ -104,11 +106,18 @@ public class LouerTache {
         PrixTotal = prixTotal;
     }
 
-    public Float getDure() {
-        return Dure;
+    public Float getDuree() {
+        return Duree;
     }
 
-    public void setDure(Float dure) {
-        Dure = dure;
+    public void setDuree(Float duree) {Duree = duree;}
+
+    public Float getPrixParJour() {
+        return PrixParJour;
     }
+
+    public void setPrixParJour(Float prixParJour) {
+        PrixParJour = prixParJour;
+    }
+
 }

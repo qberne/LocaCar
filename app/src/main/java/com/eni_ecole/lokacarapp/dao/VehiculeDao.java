@@ -12,7 +12,6 @@ import com.eni_ecole.lokacarapp.bo.Vehicule;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class VehiculeDao {
 
     private SQLiteDatabase db;
@@ -66,4 +65,25 @@ public class VehiculeDao {
         return list_gerant;
 
     }
+
+    public int update(Vehicule item) {
+        ContentValues values = new ContentValues();
+        values.put(VehiculeContract.COL_MARQUE, item.getMarque());
+        values.put(VehiculeContract.COL_MODELE, item.getModele());
+        values.put(VehiculeContract.COL_PLACES, item.getPlaces());
+        values.put(VehiculeContract.COL_IMMAT, item.getImmatriculation());
+        values.put(VehiculeContract.COL_CHEVAUX, item.getChevaux());
+        values.put(VehiculeContract.COL_KILOMETRAGE, item.getKilometrage());
+        values.put(VehiculeContract.COL_LIEN_PHOTO, item.getLienPhoto());
+        values.put(VehiculeContract.COL_PRIX_PAR_JOUR, item.getPrixParJour());
+        values.put(VehiculeContract.COL_DISPONIBLE, item.isDisponible());
+        values.put(VehiculeContract.COL_AGENCE_DE_RATTACHEMENT, item.getAgenceDeRattachement());
+
+        return db.update("VEHICULE", values, null, null);
+    }
+    public int deleteVehicule(Vehicule ancienVehicule) {
+        return db.delete("VEHICULE", GerantContract.COL_NOM + " = " + ancienVehicule, null);
+
+    }
+
 }

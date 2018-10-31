@@ -61,7 +61,7 @@ public class GerantDao {
         return db.update("GERANT", values, null ,null );
     }
 
-    public int deleteGerant(String ancienGerant) {
+    public int deleteGerant(Gerant ancienGerant) {
         return db.delete("GERANT", GerantContract.COL_NOM + " = " + ancienGerant, null);
 
     }

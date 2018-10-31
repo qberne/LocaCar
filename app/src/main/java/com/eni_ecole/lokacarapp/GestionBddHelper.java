@@ -38,5 +38,4 @@ public class GestionBddHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-
  }
