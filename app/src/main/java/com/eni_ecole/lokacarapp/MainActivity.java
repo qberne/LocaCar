@@ -11,6 +11,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.eni_ecole.lokacarapp.bo.Gerant;
+import com.eni_ecole.lokacarapp.dao.GerantDao;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     EditText username ;
     EditText password ;
@@ -34,6 +41,22 @@ public class MainActivity extends AppCompatActivity {
                 onClickLogin(v);
             }
         });
+
+        GestionBddHelper bdd = new GestionBddHelper(getApplicationContext());
+        GerantDao gerantDao = new GerantDao(getApplicationContext());
+
+        boolean isPresnent = false;
+
+        Log.v("test",gerantDao.select_all().toString());
+
+        for (Gerant g : gerantDao.select_all()
+             ) {
+            if (g.getNom().equals("admin"))
+                isPresnent = true;
+        }
+
+        if (!isPresnent)
+            gerantDao.insert(new Gerant("admin", "admin", "admin", "admin"));
     }
 
     @Override
@@ -43,19 +66,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickLogin(View view)
     {
-        if(username.getText().toString().equals("a") && password.getText().toString().equals("a"))
-        {
-            //correcct password
-            Log.d("", "login: Success");
-            username.setText("Success");
+        GerantDao gerantDao = new GerantDao(getApplicationContext());
 
-            Intent mainPageIntent = new Intent(this, MainPage.class);
-            mainPageIntent.putExtra("main_page_key", "ma_page_value"); //Optional parameters
-            this.startActivity(mainPageIntent);
-            startActivity(mainPageIntent);
-        }else{
-            //wrong password
-            Log.d("", "login: Error");
+        for (Gerant g : gerantDao.select_all()){
+            if(username.getText().toString().equals(g.getLogin()) && password.getText().toString().equals(g.getPassword()))
+            {
+                //correcct password
+                Log.d("", "login: Success");
+                username.setText("Success");
+
+                Intent mainPageIntent = new Intent(this, MainPage.class);
+                mainPageIntent.putExtra("main_page_key", "ma_page_value"); //Optional parameters
+                this.startActivity(mainPageIntent);
+                startActivity(mainPageIntent);
+            }
         }
     }
 }

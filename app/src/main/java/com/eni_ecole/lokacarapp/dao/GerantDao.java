@@ -30,7 +30,7 @@ public class GerantDao {
         return db.insert(GerantContract.TABLE_NAME, null, values);
     }
 
-    public List<Gerant> select_all(int id) {
+    public List<Gerant> select_all() {
         ContentValues values = new ContentValues();
         Cursor cursor = db.rawQuery("select * from " + GerantContract.TABLE_NAME, null);
 
