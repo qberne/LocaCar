@@ -12,7 +12,7 @@ public class MainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_page);
 
         Intent intent = getIntent();
         String value = intent.getStringExtra("main_page_key"); //if it's a string you stored.

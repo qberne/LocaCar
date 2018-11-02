@@ -11,7 +11,7 @@ public class Gerant {
     public Gerant() {
     }
 
-    public Gerant(java.lang.String nom, java.lang.String prenom, java.lang.String login, String password) {
+    public Gerant(String nom, String prenom, String login, String password) {
         Nom = nom;
         Prenom = prenom;
         Login = login;

@@ -1,6 +1,5 @@
 package com.eni_ecole.lokacarapp;
 
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,17 +44,15 @@ public class MainActivity extends AppCompatActivity {
         GestionBddHelper bdd = new GestionBddHelper(getApplicationContext());
         GerantDao gerantDao = new GerantDao(getApplicationContext());
 
-        boolean isPresnent = false;
-
-        Log.v("test",gerantDao.select_all().toString());
+        boolean isPresent = false;
 
         for (Gerant g : gerantDao.select_all()
              ) {
             if (g.getNom().equals("admin"))
-                isPresnent = true;
+                isPresent = true;
         }
 
-        if (!isPresnent)
+        if (!isPresent)
             gerantDao.insert(new Gerant("admin", "admin", "admin", "admin"));
     }
 

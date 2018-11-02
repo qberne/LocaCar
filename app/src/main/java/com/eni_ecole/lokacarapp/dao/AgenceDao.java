@@ -39,7 +39,7 @@ public class AgenceDao {
         while (cursor.moveToNext()) {
             Agence agenceEnCours = new Agence();
             agenceEnCours.setNomAgence(cursor.getString(cursor.getColumnIndex(AgenceContract.COL_NOM_AGENCE)));
-            agenceEnCours.setResponsable(cursor.getString(cursor.getColumnIndex(AgenceContract.COL_GERANT)));
+            agenceEnCours.setResponsable(cursor.getInt(cursor.getColumnIndex(AgenceContract.COL_GERANT)));
             agenceEnCours.setNbreVehicules(cursor.getInt(cursor.getColumnIndex(AgenceContract.COL_NBRE_VEHICULE)));
 
             list_agence.add(agenceEnCours);

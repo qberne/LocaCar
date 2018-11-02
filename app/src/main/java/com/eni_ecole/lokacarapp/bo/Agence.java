@@ -4,13 +4,13 @@ public class Agence {
 
     private int IdAgence;
     private String NomAgence;
-    private String Responsable;
+    private int Responsable;
     private int NbreVehicules;
 
     public Agence() {
     }
 
-    public Agence(String nomAgence, String responsable, int nbreVehicules) {
+    public Agence(String nomAgence, int responsable, int nbreVehicules) {
         NomAgence = nomAgence;
         Responsable = responsable;
         NbreVehicules = nbreVehicules;
@@ -28,11 +28,11 @@ public class Agence {
         NomAgence = nomAgence;
     }
 
-    public String getResponsable() {
+    public int getResponsable() {
         return Responsable;
     }
 
-    public void setResponsable(String responsable) {
+    public void setResponsable(int responsable) {
         Responsable = responsable;
     }
 

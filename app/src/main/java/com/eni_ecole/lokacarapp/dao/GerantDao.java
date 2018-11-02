@@ -18,10 +18,10 @@ public class GerantDao {
 
     public GerantDao(Context context) {
         helper = new GestionBddHelper(context);
-        db = helper.getWritableDatabase();
     }
 
     public long insert(Gerant item) {
+        db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(GerantContract.COL_NOM, item.getNom());
         values.put(GerantContract.COL_PRENOM, item.getPrenom());
@@ -31,6 +31,7 @@ public class GerantDao {
     }
 
     public List<Gerant> select_all() {
+        db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
         Cursor cursor = db.rawQuery("select * from " + GerantContract.TABLE_NAME, null);
 
@@ -52,6 +53,7 @@ public class GerantDao {
     }
 
     public int update(Gerant item) {
+        db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(GerantContract.COL_NOM, item.getNom());
         values.put(GerantContract.COL_PRENOM, item.getPrenom());
@@ -62,6 +64,7 @@ public class GerantDao {
     }
 
     public int deleteGerant(Gerant ancienGerant) {
+        db = helper.getWritableDatabase();
         return db.delete("GERANT", GerantContract.COL_NOM + " = " + ancienGerant, null);
 
     }
